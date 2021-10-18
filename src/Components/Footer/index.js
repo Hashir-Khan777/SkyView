@@ -19,6 +19,7 @@ function Footer() {
           <div className="row align-items-start">
             <div className="col-lg-4">
               <img
+                loading="lazy"
                 src="images/footerLogo.png"
                 className="footerLogo"
                 width={250}

@@ -31,27 +31,17 @@ function Home() {
     })();
   });
 
-  useEffect(() => {
-    window.onscroll = () => {
-      if (
-        document.querySelector(".three_divs_container").getBoundingClientRect()
-          .top -
-          window.innerHeight <
-        -100
-      ) {
-        document
-          .querySelector(".three_divs_container")
-          .classList.add("visible");
-      }
-    };
-  });
-
   return (
     <div className="Home">
       {/* ************** Header ************** */}
       <Navbar />
       <div className="navbar_image_content">
-        <img className="background_image" src="/images/image1.jpg" alt="" />
+        <img
+          loading="lazy"
+          className="background_image"
+          src="/images/image1.jpg"
+          alt=""
+        />
         <header>
           <div className="header_content">
             <div className="headings">
@@ -69,42 +59,17 @@ function Home() {
         </header>
       </div>
       {/* ************** Header end ************** */}
-      {/* ************** Three divs ************** */}
-      <div className="container three_divs_container">
-        <div className="row justify-content-center three_rows">
-          <div className="col-lg-4 col-md-6 col-12 mb-3 services">
-            <img
-              src="images/speciality1.jpeg"
-              alt=""
-              width="100%"
-              height="100%"
-            />
-          </div>
-          <div className="col-lg-4 col-md-6 col-12 mb-3 services">
-            <img
-              src="images/speciality2.jpeg"
-              alt=""
-              width="100%"
-              height="100%"
-            />
-          </div>
-          <div className="col-lg-4 col-md-6 col-12 services">
-            <img
-              src="images/speciality3.jpeg"
-              alt=""
-              width="100%"
-              height="100%"
-            />
-          </div>
-        </div>
-      </div>
-      {/* ************** Three divs end ************** */}
       {/* ************** About us ************** */}
       <section>
         <div className="container">
           <div className="row about_row row-cols-lg-2 row-cols-1 justify-content-evenly">
             <div className="col about_testimonial about_col">
-              <img className="about_image" src="images/image3.jpg" alt="" />
+              <img
+                loading="lazy"
+                className="about_image"
+                src="images/image3.jpg"
+                alt=""
+              />
               <div className="testimonial">
                 <FontAwesomeIcon icon={faQuoteRight} className="quote_icon" />
                 <div className="cone" />
@@ -168,44 +133,21 @@ function Home() {
                   icon={faDotCircle}
                   style={{ color: "#40515e", margin: "0 10px" }}
                 />
-                Business
+                Theme park facing
               </li>
               <li>
                 <FontAwesomeIcon
                   icon={faDotCircle}
                   style={{ color: "#40515e", margin: "0 10px" }}
                 />
-                Entertainment
+                Commercial showrooms with benefits
               </li>
               <li>
                 <FontAwesomeIcon
                   icon={faDotCircle}
                   style={{ color: "#40515e", margin: "0 10px" }}
                 />
-                Communication
-              </li>
-            </ul>
-            <ul>
-              <li>
-                <FontAwesomeIcon
-                  icon={faDotCircle}
-                  style={{ color: "#40515e", margin: "0 10px" }}
-                />
-                Social
-              </li>
-              <li>
-                <FontAwesomeIcon
-                  icon={faDotCircle}
-                  style={{ color: "#40515e", margin: "0 10px" }}
-                />
-                Finance
-              </li>
-              <li>
-                <FontAwesomeIcon
-                  icon={faDotCircle}
-                  style={{ color: "#40515e", margin: "0 10px" }}
-                />
-                Shopping
+                Welcoming reception
               </li>
             </ul>
             <ul>
@@ -214,21 +156,44 @@ function Home() {
                   icon={faDotCircle}
                   style={{ color: "#40515e", margin: "0 10px" }}
                 />
-                Music &amp; Audio
+                Huge car parking
               </li>
               <li>
                 <FontAwesomeIcon
                   icon={faDotCircle}
                   style={{ color: "#40515e", margin: "0 10px" }}
                 />
-                Auto &amp; Vehicle
+                Wide space lounge
               </li>
               <li>
                 <FontAwesomeIcon
                   icon={faDotCircle}
                   style={{ color: "#40515e", margin: "0 10px" }}
                 />
-                Health &amp; Fitness
+                Modren kitchen
+              </li>
+            </ul>
+            <ul>
+              <li>
+                <FontAwesomeIcon
+                  icon={faDotCircle}
+                  style={{ color: "#40515e", margin: "0 10px" }}
+                />
+                Spa like bath
+              </li>
+              <li>
+                <FontAwesomeIcon
+                  icon={faDotCircle}
+                  style={{ color: "#40515e", margin: "0 10px" }}
+                />
+                Stand by generator
+              </li>
+              <li>
+                <FontAwesomeIcon
+                  icon={faDotCircle}
+                  style={{ color: "#40515e", margin: "0 10px" }}
+                />
+                24/7 Security and maintainance
               </li>
             </ul>
           </div>
@@ -272,19 +237,19 @@ function Home() {
               </button>
             </div>
             <div className="col-lg-4 service_col">
-              <img src="images/exterior.jpg" alt="" />
+              <img loading="lazy" src="images/exterior.jpg" alt="" />
             </div>
             <div className="col-lg-4 service_col">
-              <img src="images/interior.jpg" alt="" />
+              <img loading="lazy" src="images/interior.jpg" alt="" />
             </div>
             <div className="col-lg-4 service_col">
-              <img src="images/bedroom.jpg" alt="" />
+              <img loading="lazy" src="images/bedroom.jpg" alt="" />
             </div>
             <div className="col-lg-4 service_col">
-              <img src="images/kitchen.jpg" alt="" />
+              <img loading="lazy" src="images/kitchen.jpg" alt="" />
             </div>
             <div className="col-lg-4 service_col">
-              <img src="images/bathroom.jpg" alt="" />
+              <img loading="lazy" src="images/bathroom.jpg" alt="" />
             </div>
           </div>
         </div>
@@ -313,7 +278,12 @@ function Home() {
                 profile creation abilities. They delivered everything I asked
                 for.
               </p>
-              <img src="images/if-min.jpg" alt="" className="ceo" />
+              <img
+                loading="lazy"
+                src="images/if-min.jpg"
+                alt=""
+                className="ceo"
+              />
               <p>
                 <span className="name_heading">Jonathan Viverette</span>
                 <br />
@@ -422,32 +392,6 @@ function Home() {
         </div>
       </div>
       {/* ************** Contact us end ************** */}
-      {/* ************** Trusted companies ************** */}
-      <section className="companies">
-        <div className="trusted_companies">
-          <h1>Trusted By The World’s Best Organizations</h1>
-          <div className="container">
-            <div className="row">
-              <div className="col companies_col">
-                <img src="images/gotcha.png" width={150} alt="" />
-              </div>
-              <div className="col companies_col">
-                <img src="images/gotcha.png" width={150} alt="" />
-              </div>
-              <div className="col companies_col">
-                <img src="images/gotcha.png" width={150} alt="" />
-              </div>
-              <div className="col companies_col">
-                <img src="images/gotcha.png" width={150} alt="" />
-              </div>
-              <div className="col companies_col">
-                <img src="images/gotcha.png" width={150} alt="" />
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      {/* ************** Trusted companies END ************** */}
       {/* ************** Footer ************** */}
       <Footer />
       {/* ************** Footer end ************** */}

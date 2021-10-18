@@ -33,7 +33,12 @@ function Navbar() {
                 </Link>
               </li>
               <li className="nav-item">
-                <a className="nav-link" aria-current="page" href="#">
+                <a
+                  className="nav-link"
+                  aria-current="page"
+                  target="_blank"
+                  href="https://firebasestorage.googleapis.com/v0/b/invictusskyview.appspot.com/o/1234.pdf?alt=media&token=c3ca16c2-1baf-4259-b1f6-0b5b436a6ab2"
+                >
                   Brochure
                 </a>
               </li>

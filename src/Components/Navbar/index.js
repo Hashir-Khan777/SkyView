@@ -43,14 +43,14 @@ function Navbar() {
                 </a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" aria-current="page" href="#">
+                <a className="nav-link" aria-current="page" href="#book">
                   Book a visit
                 </a>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" aria-current="page" to="/contact">
+                <a className="nav-link" aria-current="page" href="#contact">
                   Contact us
-                </Link>
+                </a>
               </li>
             </ul>
           </div>

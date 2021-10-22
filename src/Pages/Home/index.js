@@ -1,20 +1,11 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faQuoteRight,
-  faArrowRight,
   faDotCircle,
   faCheck,
 } from "@fortawesome/free-solid-svg-icons";
 import { Footer, Navbar } from "../../Components";
-import Modal from "react-modal";
-
-const customStyles = {
-  overlay: {
-    zIndex: 999,
-    backgroundColor: "rgba(0, 0, 0, 0.5)",
-  },
-};
 
 function Home() {
   useEffect(() => {
@@ -52,7 +43,7 @@ function Home() {
                 development, and strategy experts. All in one place.
               </p>
               <button type="button" className="btn build_button">
-                let's build
+                chat now
               </button>
             </div>
           </div>
@@ -211,7 +202,7 @@ function Home() {
           title="YouTube video player"
           frameborder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen={true}
+          allowFullScreen
         ></iframe>
       </div>
       {/* ************** TVc end ************** */}
@@ -261,34 +252,95 @@ function Home() {
           <div className="row">
             <div className="col-lg-6 col-12 testimonial_image testimonial_col"></div>
             <div
-              className="col-lg-6 col-12 testimonial_center"
-              style={{ backgroundColor: "#091e2a", color: "#fff" }}
+              id="book"
+              className="col-lg-6 col-12 testimonial_col"
+              style={{
+                backgroundColor: "#091e2a",
+                color: "#fff",
+                padding: "100px 70px",
+              }}
             >
-              <h1>What Clients Say About Us</h1>
-              <div className="circle">
-                <FontAwesomeIcon
-                  icon={faQuoteRight}
-                  style={{ fontSize: "45px", color: "#00b53a" }}
-                />
+              <h1>Book a visit</h1>
+              <div className="row">
+                <div className="col testimonial_form_col">
+                  <label htmlFor="testimonial_name">Name</label>
+                  <input
+                    type="text"
+                    placeholder="Your Name"
+                    id="testimonial_name"
+                  />
+                </div>
+                <div className="col testimonial_form_col">
+                  <label htmlFor="testimonial_phone">Phone Number</label>
+                  <input
+                    type="text"
+                    id="testimonial_phone"
+                    placeholder="Your Phone"
+                  />
+                </div>
               </div>
-              <p className="client_testimonial">
-                Appshah was hired to build a speech pathology social app. The
-                iOS- and Android-compatible platform connects parents with
-                pathologists, and features a forum, instant messaging, and
-                profile creation abilities. They delivered everything I asked
-                for.
-              </p>
-              <img
-                loading="lazy"
-                src="images/if-min.jpg"
-                alt=""
-                className="ceo"
-              />
-              <p>
-                <span className="name_heading">Jonathan Viverette</span>
-                <br />
-                CEO, iFollow Inc.
-              </p>
+              <div className="row">
+                <div className="col testimonial_form_col">
+                  <label htmlFor="testimonial_budget">Number of persons</label>
+                  <select
+                    name
+                    id="testimonial_budget"
+                    className="testimonial_budget_select"
+                  >
+                    <option value={0}>Select</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5+">5+</option>
+                  </select>
+                </div>
+                <div className="col testimonial_form_col">
+                  <label htmlFor="testimonial_time">Time</label>
+                  <select
+                    name
+                    id="testimonial_time"
+                    className="testimonial_budget_select"
+                  >
+                    <option value={0}>Select time</option>
+                    <option value="$1000-$3000">10:00</option>
+                    <option value="$1000-$3000">10:30</option>
+                    <option value="$1000-$3000">11:00</option>
+                    <option value="$1000-$3000">11:30</option>
+                    <option value="$1000-$3000">12:00</option>
+                    <option value="$1000-$3000">12:30</option>
+                    <option value="$1000-$3000">1:00</option>
+                    <option value="$1000-$3000">1:30</option>
+                    <option value="$1000-$3000">2:00</option>
+                    <option value="$1000-$3000">2:30</option>
+                    <option value="$1000-$3000">3:00</option>
+                    <option value="$1000-$3000">3:30</option>
+                    <option value="$1000-$3000">4:00</option>
+                    <option value="$1000-$3000">4:30</option>
+                    <option value="$1000-$3000">5:00</option>
+                    <option value="$1000-$3000">5:30</option>
+                    <option value="$1000-$3000">6:00</option>
+                    <option value="$1000-$3000">6:30</option>
+                    <option value="$1000-$3000">7:00</option>
+                  </select>
+                </div>
+              </div>
+              <div className="row">
+                <div className="col testimonial_form_col">
+                  <label htmlFor="testimonial_date">Date</label>
+                  <input
+                    type="date"
+                    id="testimonial_date"
+                    placeholder="Your Phone"
+                  />
+                  <button
+                    type="button"
+                    className="btn btn-primary number about_button mt-4"
+                  >
+                    Submit Request
+                  </button>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -339,7 +391,10 @@ function Home() {
               03000000000
             </button>
           </div>
-          <div className="col-lg-6 col-12 contact_col conatct_form_col">
+          <div
+            className="col-lg-6 col-12 contact_col conatct_form_col"
+            id="contact"
+          >
             <div className="row">
               <div className="col form_col">
                 <label htmlFor="name">Name</label>
@@ -352,18 +407,8 @@ function Home() {
             </div>
             <div className="row">
               <div className="col form_col">
-                <label htmlFor="budget">Budget</label>
-                <select name id="budget" className="budget_select">
-                  <option value={0}>Range</option>
-                  <option value="$1000-$3000">$1000-$3000</option>
-                  <option value="$1000-$3000">$1000-$3000</option>
-                  <option value="$1000-$3000">$1000-$3000</option>
-                  <option value="$1000-$3000">$1000-$3000</option>
-                </select>
-              </div>
-              <div className="col form_col">
                 <label htmlFor="phone">Phone Number</label>
-                <input type="text" id="phone" placeholder="Your Phone" />
+                <input type="number" id="phone" placeholder="Your Phone" />
               </div>
             </div>
             <div className="row">

@@ -543,6 +543,23 @@ section {
   margin: 20px 0;
 }
 
+.testimonial_col .row {
+  margin: 10px 0;
+}
+
+.testimonial_form_col label {
+  font-size: 16px;
+}
+
+.testimonial_form_col input,
+.testimonial_budget_select {
+  padding: 6px;
+  font-size: 15px;
+  width: 100%;
+  outline: none;
+  border-radius: 3px;
+}
+
 .form_col label {
   font-size: 17px;
 }

@@ -1,6 +1,7 @@
 {
   "name": "skyview",
   "version": "0.1.0",
+  "homepage": "http://skyview.a5bd.com",
   "private": true,
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.36",

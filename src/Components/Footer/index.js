@@ -36,8 +36,8 @@ function Footer() {
                     style={{ color: "#ffffff", fontSize: "20px" }}
                   />
                   <p>
-                    2500 Broadway Building F, Suite F-125 Santa Monica, CA
-                    90404.
+                    Plot # B 74-75, Precinct-03, Westren Service Road, Jinnah
+                    Avenue Commercial 2, Bahria Town, Karachi, Pakistan
                   </p>
                 </div>
                 <div className="footer_check_mark">
@@ -46,7 +46,7 @@ function Footer() {
                     style={{ color: "#ffffff", fontSize: "20px" }}
                   />
                   <p>
-                    <a href="mailto:sales@appshah.com">sales@appshah.com</a>
+                    <a href="mailto:sales@appshah.com">sales@a5bd.com</a>
                   </p>
                 </div>
                 <div className="footer_check_mark">
@@ -55,7 +55,7 @@ function Footer() {
                     style={{ color: "#ffffff", fontSize: "20px" }}
                   />
                   <p>
-                    <a href="tel:+923000000000">03000000000</a>
+                    <a href="tel:+923041115505">03041115505</a>
                   </p>
                 </div>
               </div>
@@ -130,8 +130,8 @@ function Footer() {
                 Get the latest news &amp; updates
               </p>
               <div className="container">
-                <div className="row newsletter_links justify-content-start align-items-start">
-                  <div className="col-lg-2">
+                <div className="row newsletter_links justify-content-evenly align-items-start">
+                  <div className="col-lg-2 social_link">
                     <a
                       href="#"
                       className="newsletter_circle"
@@ -143,7 +143,7 @@ function Footer() {
                       />
                     </a>
                   </div>
-                  <div className="col-lg-2">
+                  <div className="col-lg-2 social_link">
                     <a
                       href="#"
                       className="newsletter_circle"
@@ -155,7 +155,7 @@ function Footer() {
                       />
                     </a>
                   </div>
-                  <div className="col-lg-2">
+                  <div className="col-lg-2 social_link">
                     <a
                       href="#"
                       className="newsletter_circle"
@@ -173,8 +173,17 @@ function Footer() {
           </div>
         </div>
         <div className="copy_right">
-          <p style={{ color: "#00b53a" }}>DREAM.DESIRE.DEVELOP</p>
-          <p>Copyright © 2021 Appshah All rights reserved.</p>
+          <p style={{ color: "#00b53a" }}>
+            A project of{" "}
+            <a
+              href="http://www.a5bd.com"
+              target="_blank"
+              style={{ color: "#00b53a", textDecoration: "none" }}
+            >
+              A5 builders and developers
+            </a>
+          </p>
+          <p>Copyright © 2021 Sky View All rights reserved.</p>
         </div>
       </div>
     </section>

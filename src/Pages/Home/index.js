@@ -75,13 +75,15 @@ function Home() {
               <h2 className="about_us_heading">about us</h2>
               <h1>Turn ideas into revolutionary products &amp; services</h1>
               <p>
-                We build affordable technology solutions for businesses, large
-                &amp; small. By applying modern design principles along with the
-                latest in mobile &amp; web technologies, we create tailored
-                solutions that add value by connecting people with each other,
-                businesses with their customers, and decision makers with
-                valuable information, while simplifying business processes,
-                accelerating production, and lowering costs.
+                A5 Builders and Developers presents to your attention a very
+                attractive offer of elegant, comfortable and innovative subtle
+                designed luxurious apartment. Apartment with 5, and 6 rooms and
+                a unique interior, enjoying an excellent location on main Jinnah
+                Avenue Bahria Town Karachi. A5 Builders and Developers presents
+                to your attention a very attractive offer of elegant,
+                comfortable and innovative subtle designed luxurious apartment.
+                Apartment with 5, and 6 rooms and a unique interior, enjoying an
+                excellent location on main Jinnah Avenue Bahria Town Karachi.
               </p>
               <button
                 type="button"
@@ -114,8 +116,9 @@ function Home() {
           <h3>our experience</h3>
           <h1>Our Expertise in Multiple Industries</h1>
           <p>
-            Our mobile application development experience varies across a
-            variety of niches and business markets.
+            A5 Builders and Developers presents to your attention a very
+            attractive offer of elegant, comfortable and innovative subtle
+            designed luxurious apartment.
           </p>
           <div className="experience_lists">
             <ul>

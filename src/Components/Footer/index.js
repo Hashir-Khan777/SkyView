@@ -26,8 +26,9 @@ function Footer() {
                 alt=""
               />
               <p className="footer_para">
-                Build world-class digital products with a team of design,
-                development, and strategy experts. All in one place.
+                A5 Builders and Developers presents to your attention a very
+                attractive offer of elegant, comfortable and innovative subtle
+                designed luxurious apartment.
               </p>
               <div className="footer_list">
                 <div className="footer_check_mark">

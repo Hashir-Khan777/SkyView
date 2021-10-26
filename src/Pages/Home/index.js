@@ -36,11 +36,12 @@ function Home() {
         <header>
           <div className="header_content">
             <div className="headings">
-              <h4>Looking to Develop Your</h4>
-              <h1>Dream Mobile Application?</h1>
+              <h4>In today's life,</h4>
+              <h1>Luxry is time and space</h1>
               <p>
-                Build world-class digital products with a team of design,
-                development, and strategy experts. All in one place.
+                Our aim is to become the most preferred contractor and facility
+                partner for our customers and to set the benchmark to which we
+                compare our competitors are measured.
               </p>
               <button type="button" className="btn build_button">
                 chat now
@@ -65,15 +66,14 @@ function Home() {
                 <FontAwesomeIcon icon={faQuoteRight} className="quote_icon" />
                 <div className="cone" />
                 <p>
-                  We eat, sleep, and breathe mobile. It’s who we are. We create
-                  the kind of apps that people love &amp; are used over &amp;
-                  over again.
+                  We, provide you the finest possible construction and estate
+                  based services for your residence and businesses.
                 </p>
               </div>
             </div>
             <div className="col about_content about_col">
               <h2 className="about_us_heading">about us</h2>
-              <h1>Turn ideas into revolutionary products &amp; services</h1>
+              <h1>provide you the finest possible construction.</h1>
               <p>
                 A5 Builders and Developers presents to your attention a very
                 attractive offer of elegant, comfortable and innovative subtle
@@ -94,15 +94,24 @@ function Home() {
               <div className="checks">
                 <div className="check_mark">
                   <FontAwesomeIcon icon={faCheck} />
-                  <p>We are committed to providing quality IT Services</p>
+                  <p>
+                    Our entire team is determined to offer you personalized
+                    services
+                  </p>
                 </div>
                 <div className="check_mark">
                   <FontAwesomeIcon icon={faCheck} />
-                  <p>We are committed to providing quality IT Services</p>
+                  <p>
+                    Our entire team is determined to offer you personalized
+                    services
+                  </p>
                 </div>
                 <div className="check_mark">
                   <FontAwesomeIcon icon={faCheck} />
-                  <p>We are committed to providing quality IT Services</p>
+                  <p>
+                    Our entire team is determined to offer you personalized
+                    services
+                  </p>
                 </div>
               </div>
             </div>
@@ -351,10 +360,6 @@ function Home() {
           <h1>
             Don’t Hesitate To Contact Us For Better Information And Services
           </h1>
-          <p>
-            To ensure the privacy and confidentiality of your project, we sign
-            an NDA (Non-Disclosure Agreement) before any business proceeding.
-          </p>
         </div>
       </section>
       {/* ************** Testimonials end ************** */}
@@ -362,7 +367,7 @@ function Home() {
       <div className="container contact_form">
         <div className="row contact_row">
           <div className="col-lg-6 col-12 contact_col contact_image">
-            <h1>Perfect Solutions For Your Business</h1>
+            <h1>Perfect Solutions For Constructions</h1>
             <p className="contact_para">
               Fill in the form and tell us about your project. Our team will
               contact you promptly to discuss next steps.
@@ -373,25 +378,34 @@ function Home() {
                   icon={faCheck}
                   className="contact_check_icon"
                 />
-                <p>We are committed to providing quality IT Services</p>
+                <p>
+                  Our entire team is determined to offer you personalized
+                  services
+                </p>
               </div>
               <div className="contact_check_mark">
                 <FontAwesomeIcon
                   icon={faCheck}
                   className="contact_check_icon"
                 />
-                <p>We are committed to providing quality IT Services</p>
+                <p>
+                  Our entire team is determined to offer you personalized
+                  services
+                </p>
               </div>
               <div className="contact_check_mark">
                 <FontAwesomeIcon
                   icon={faCheck}
                   className="contact_check_icon"
                 />
-                <p>We are committed to providing quality IT Services</p>
+                <p>
+                  Our entire team is determined to offer you personalized
+                  services
+                </p>
               </div>
             </div>
             <button type="button" className="btn btn-primary contact_button">
-              03000000000
+              03041115505
             </button>
           </div>
           <div

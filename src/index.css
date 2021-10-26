@@ -212,6 +212,8 @@ section {
 
 .check_mark {
   display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .check_mark p {

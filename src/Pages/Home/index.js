@@ -37,15 +37,19 @@ function Home() {
           <div className="header_content">
             <div className="headings">
               <h4>In today's life,</h4>
-              <h1>Luxry is time and space</h1>
+              <h1>Luxury Is Time And Space</h1>
               <p>
-                Our aim is to become the most preferred contractor and facility
-                partner for our customers and to set the benchmark to which we
-                compare our competitors are measured.
+                We specialize in residential and commercial properties. With a
+                thorough understanding of the market, our advisors offer
+                everything you need including homes, plots of land, apartment
+                and homes to office buildings, commercial spaces or business
+                center.
               </p>
-              <button type="button" className="btn build_button">
-                chat now
-              </button>
+              <a href="javascript:void(Tawk_API.toggle())">
+                <button type="button" className="btn build_button">
+                  chat now
+                </button>
+              </a>
             </div>
           </div>
         </header>
@@ -73,45 +77,53 @@ function Home() {
             </div>
             <div className="col about_content about_col">
               <h2 className="about_us_heading">about us</h2>
-              <h1>provide you the finest possible construction.</h1>
+              <h1 style={{ textTransform: "capitalize" }}>
+                provide you the finest possible construction.
+              </h1>
               <p>
-                A5 Builders and Developers presents to your attention a very
-                attractive offer of elegant, comfortable and innovative subtle
-                designed luxurious apartment. Apartment with 5, and 6 rooms and
-                a unique interior, enjoying an excellent location on main Jinnah
-                Avenue Bahria Town Karachi. A5 Builders and Developers presents
-                to your attention a very attractive offer of elegant,
-                comfortable and innovative subtle designed luxurious apartment.
-                Apartment with 5, and 6 rooms and a unique interior, enjoying an
-                excellent location on main Jinnah Avenue Bahria Town Karachi.
+                SkyView has been designed to offer an unwinding lifestyle and
+                comfort living in the safest surroundings in Bahria Town
+                Karachi. SkyView is a company that SkyView promises to provide
+                you with the most value for budget, we are committed to making
+                simple and efficient plans for our clients of all kinds. We
+                concentrate on the top quality of construction and insist on
+                using only the highest quality materials for our projects The
+                inspiration for us is driven by our customers and their needs
+                for a contemporary life style that drives us to create and
+                construct infrastructures that meet needs in the future. In your
+                community. There you can avail the latest facilities provided by
+                BT which includes modern, high-end gold course, mosques cinemas
+                and schools, supermarkets, theme parks, hospitals where your
+                hopes will come true.
               </p>
-              <button
-                type="button"
-                className="btn btn-primary number about_button"
-              >
-                get started
-              </button>
               <div className="checks">
-                <div className="check_mark">
-                  <FontAwesomeIcon icon={faCheck} />
-                  <p>
-                    Our entire team is determined to offer you personalized
-                    services
-                  </p>
+                <div style={{ flex: "0.47" }}>
+                  <div className="check_mark">
+                    <FontAwesomeIcon icon={faCheck} />
+                    <p>24/7 SECURITY</p>
+                  </div>
+                  <div className="check_mark">
+                    <FontAwesomeIcon icon={faCheck} />
+                    <p>GREAT HOUSEKEEPING</p>
+                  </div>
+                  <div className="check_mark">
+                    <FontAwesomeIcon icon={faCheck} />
+                    <p>STANDBY GENERATOR</p>
+                  </div>
                 </div>
-                <div className="check_mark">
-                  <FontAwesomeIcon icon={faCheck} />
-                  <p>
-                    Our entire team is determined to offer you personalized
-                    services
-                  </p>
-                </div>
-                <div className="check_mark">
-                  <FontAwesomeIcon icon={faCheck} />
-                  <p>
-                    Our entire team is determined to offer you personalized
-                    services
-                  </p>
+                <div style={{ flex: "0.5" }}>
+                  <div className="check_mark">
+                    <FontAwesomeIcon icon={faCheck} />
+                    <p>FIRE SAFETY</p>
+                  </div>
+                  <div className="check_mark">
+                    <FontAwesomeIcon icon={faCheck} />
+                    <p>STANDBY GENERATOR</p>
+                  </div>
+                  <div className="check_mark">
+                    <FontAwesomeIcon icon={faCheck} />
+                    <p>EASY AND CONTROLLED ACCESSIBILITY TO ALL FLOOR</p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -122,30 +134,29 @@ function Home() {
       {/* ************** Experience ************** */}
       <section>
         <div className="container experience">
-          <h3>our experience</h3>
-          <h1>Our Expertise in Multiple Industries</h1>
+          <h1>Our Expertise</h1>
           <p>
-            A5 Builders and Developers presents to your attention a very
-            attractive offer of elegant, comfortable and innovative subtle
-            designed luxurious apartment.
+            We encourage a culture that is clean and hygienic. Our housekeeping
+            staff is professional and diligent in meeting the requirements of
+            our guests and residents at any time.
           </p>
           <div className="experience_lists">
             <ul>
-              <li>
+              <li style={{ textTransform: "capitalize" }}>
                 <FontAwesomeIcon
                   icon={faDotCircle}
                   style={{ color: "#40515e", margin: "0 10px" }}
                 />
                 Theme park facing
               </li>
-              <li>
+              <li style={{ textTransform: "capitalize" }}>
                 <FontAwesomeIcon
                   icon={faDotCircle}
                   style={{ color: "#40515e", margin: "0 10px" }}
                 />
                 Commercial showrooms with benefits
               </li>
-              <li>
+              <li style={{ textTransform: "capitalize" }}>
                 <FontAwesomeIcon
                   icon={faDotCircle}
                   style={{ color: "#40515e", margin: "0 10px" }}
@@ -154,21 +165,21 @@ function Home() {
               </li>
             </ul>
             <ul>
-              <li>
+              <li style={{ textTransform: "capitalize" }}>
                 <FontAwesomeIcon
                   icon={faDotCircle}
                   style={{ color: "#40515e", margin: "0 10px" }}
                 />
                 Huge car parking
               </li>
-              <li>
+              <li style={{ textTransform: "capitalize" }}>
                 <FontAwesomeIcon
                   icon={faDotCircle}
                   style={{ color: "#40515e", margin: "0 10px" }}
                 />
                 Wide space lounge
               </li>
-              <li>
+              <li style={{ textTransform: "capitalize" }}>
                 <FontAwesomeIcon
                   icon={faDotCircle}
                   style={{ color: "#40515e", margin: "0 10px" }}
@@ -177,21 +188,21 @@ function Home() {
               </li>
             </ul>
             <ul>
-              <li>
+              <li style={{ textTransform: "capitalize" }}>
                 <FontAwesomeIcon
                   icon={faDotCircle}
                   style={{ color: "#40515e", margin: "0 10px" }}
                 />
                 Spa like bath
               </li>
-              <li>
+              <li style={{ textTransform: "capitalize" }}>
                 <FontAwesomeIcon
                   icon={faDotCircle}
                   style={{ color: "#40515e", margin: "0 10px" }}
                 />
                 Stand by generator
               </li>
-              <li>
+              <li style={{ textTransform: "capitalize" }}>
                 <FontAwesomeIcon
                   icon={faDotCircle}
                   style={{ color: "#40515e", margin: "0 10px" }}
@@ -232,12 +243,14 @@ function Home() {
                 see the amazing adventure park in front of your project on main
                 jinna avenue, the only residential project of jinna venue
               </p>
-              <button
-                type="button"
-                className="btn btn-primary number about_button"
-              >
-                book now
-              </button>
+              <a href="#book">
+                <button
+                  type="button"
+                  className="btn btn-primary number about_button"
+                >
+                  book now
+                </button>
+              </a>
             </div>
             <div className="col-lg-4 service_col">
               <img loading="lazy" src="images/exterior.jpg" alt="" />
@@ -269,7 +282,7 @@ function Home() {
               style={{
                 backgroundColor: "#091e2a",
                 color: "#fff",
-                padding: "100px 70px",
+                padding: "150px 70px",
               }}
             >
               <h1>Book a visit</h1>
@@ -367,7 +380,7 @@ function Home() {
       <div className="container contact_form">
         <div className="row contact_row">
           <div className="col-lg-6 col-12 contact_col contact_image">
-            <h1>Perfect Solutions For Constructions</h1>
+            <h1>MANAGE YOUR PROPERTY 24/7</h1>
             <p className="contact_para">
               Fill in the form and tell us about your project. Our team will
               contact you promptly to discuss next steps.

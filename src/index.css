@@ -207,12 +207,13 @@ section {
 }
 
 .checks {
+  display: flex;
   margin-top: 100px;
 }
 
 .check_mark {
   display: flex;
-  justify-content: center;
+  justify-content: start;
   align-items: center;
 }
 

@@ -7,6 +7,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import {
   faFacebookF,
+  faInstagram,
   faLinkedinIn,
   faTwitter,
 } from "@fortawesome/free-brands-svg-icons";
@@ -26,9 +27,9 @@ function Footer() {
                 alt=""
               />
               <p className="footer_para">
-                A5 Builders and Developers presents to your attention a very
-                attractive offer of elegant, comfortable and innovative subtle
-                designed luxurious apartment.
+                Each of our properties has its distinct design style and offers
+                a lifestyle that is aspirational in a vibrant community that is
+                supported by the A5 Builders & Developers.
               </p>
               <div className="footer_list">
                 <div className="footer_check_mark">
@@ -134,7 +135,8 @@ function Footer() {
                 <div className="row newsletter_links justify-content-evenly align-items-start">
                   <div className="col-lg-2 social_link">
                     <a
-                      href="#"
+                      href="https://www.facebook.com/SVtower"
+                      target="_blank"
                       className="newsletter_circle"
                       style={{ backgroundColor: "#4b69b1" }}
                     >
@@ -146,24 +148,13 @@ function Footer() {
                   </div>
                   <div className="col-lg-2 social_link">
                     <a
-                      href="#"
+                      href="https://www.instagram.com/skyviewtower/"
+                      target="_blank"
                       className="newsletter_circle"
-                      style={{ backgroundColor: "#27aaf4" }}
+                      style={{ backgroundColor: "#8f33a3" }}
                     >
                       <FontAwesomeIcon
-                        icon={faTwitter}
-                        style={{ fontSize: "20px" }}
-                      />
-                    </a>
-                  </div>
-                  <div className="col-lg-2 social_link">
-                    <a
-                      href="#"
-                      className="newsletter_circle"
-                      style={{ backgroundColor: "#0a66c2" }}
-                    >
-                      <FontAwesomeIcon
-                        icon={faLinkedinIn}
+                        icon={faInstagram}
                         style={{ fontSize: "20px" }}
                       />
                     </a>

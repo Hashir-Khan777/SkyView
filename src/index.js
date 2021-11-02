@@ -6,6 +6,7 @@ import "./index.css";
 import "./media.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap";
+import "./database";
 
 ReactDOM.render(
   <React.StrictMode>

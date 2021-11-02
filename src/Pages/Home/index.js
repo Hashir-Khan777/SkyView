@@ -1,13 +1,31 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faQuoteRight,
-  faDotCircle,
-  faCheck,
-} from "@fortawesome/free-solid-svg-icons";
+import { faQuoteRight, faDotCircle } from "@fortawesome/free-solid-svg-icons";
 import { Footer, Navbar } from "../../Components";
+import { getFirestore, collection, addDoc } from "firebase/firestore";
 
 function Home() {
+  const [bookVisit, setBookVisit] = useState({
+    name: "",
+    number: "",
+    persons: "",
+    time: "",
+    date: "",
+  });
+  const [form, setForm] = useState({
+    name: "",
+    email: "",
+    number: "",
+    detail: "",
+  });
+
+  const bookavisit = async () => {
+    await addDoc(collection(getFirestore(), "bookVisit"), bookVisit);
+  };
+  const send = async () => {
+    await addDoc(collection(getFirestore(), "contactForm"), form);
+  };
+
   useEffect(() => {
     var Tawk_API = Tawk_API || {},
       Tawk_LoadStart = new Date();
@@ -21,6 +39,27 @@ function Home() {
       s0.parentNode.insertBefore(s1, s0);
     })();
   });
+  useEffect(() => {
+    window.onscroll = () => {
+      if (
+        document.querySelector(".testimonial") &&
+        document.querySelector(".testimonial").getBoundingClientRect().top -
+          window.innerHeight <
+          -100
+      ) {
+        document.querySelector(".testimonial").classList.add("visible");
+      }
+
+      if (
+        document.querySelector(".contact_form") &&
+        document.querySelector(".contact_form").getBoundingClientRect().top -
+          window.innerHeight <
+          -100
+      ) {
+        document.querySelector(".contact_form").classList.add("visible");
+      }
+    };
+  }, []);
 
   return (
     <div className="Home">
@@ -36,14 +75,15 @@ function Home() {
         <header>
           <div className="header_content">
             <div className="headings">
-              <h4>In today's life,</h4>
-              <h1>Luxury Is Time And Space</h1>
+              <h1>
+                Luxury and a healthy way of living is the motto of modern life.
+              </h1>
               <p>
-                We specialize in residential and commercial properties. With a
-                thorough understanding of the market, our advisors offer
-                everything you need including homes, plots of land, apartment
-                and homes to office buildings, commercial spaces or business
-                center.
+                A5B&D, proudly announces its first eco-friendly project, SkyView
+                Tower in Bahria Town, one of the benchmarks of Karachi city. It
+                is a project that symbolizes the excellence of living in this
+                era, by giving you a peaceful and comfortable environment for
+                your dwelling in the city of lights.
               </p>
               <a href="javascript:void(Tawk_API.toggle())">
                 <button type="button" className="btn build_button">
@@ -76,70 +116,99 @@ function Home() {
               </div>
             </div>
             <div className="col about_content about_col">
-              <h2 className="about_us_heading">about us</h2>
               <h1 style={{ textTransform: "capitalize" }}>
-                provide you the finest possible construction.
+                Owning a good place is a blessing in disguise
               </h1>
               <p>
-                SkyView has been designed to offer an unwinding lifestyle and
-                comfort living in the safest surroundings in Bahria Town
-                Karachi. SkyView is a company that SkyView promises to provide
-                you with the most value for budget, we are committed to making
-                simple and efficient plans for our clients of all kinds. We
-                concentrate on the top quality of construction and insist on
-                using only the highest quality materials for our projects The
-                inspiration for us is driven by our customers and their needs
-                for a contemporary life style that drives us to create and
-                construct infrastructures that meet needs in the future. In your
-                community. There you can avail the latest facilities provided by
-                BT which includes modern, high-end gold course, mosques cinemas
-                and schools, supermarkets, theme parks, hospitals where your
-                hopes will come true.
+                It is vital for your future growth that you find the finest
+                place to lay the foundation for your family, especially in
+                Karachi. Hence, owning a suitable place for your family and kids
+                is the best decision you can make for your family. SkyView is a
+                residential complex in Bahria Town, Karachi, that has been
+                created to provide a relaxing lifestyle and comfort in the
+                safest surroundings. A5B&D is a construction company that
+                through SkyView claims to provide you the most value for your
+                money; we are dedicated to creating simple and efficient plans
+                for all of our clients. We place a high concentration on
+                top-grade construction quality and insist on using only the best
+                materials in our projects. Our motivation comes from our
+                clients' needs for a modern lifestyle, which motivates us to
+                design and build infrastructures that will suit those needs in
+                the future. Plus, through this project, you will avail of the
+                latest facilities present in Bahria Town, which include a
+                modern, high-end golf course, mosques, cinemas, and schools,
+                supermarkets, theme parks, and hospitals. In the end, what
+                matters is your will and decision in the completion of your
+                dream. So book your visit now!
               </p>
-              <div className="checks">
-                <div style={{ flex: "0.47" }}>
-                  <div className="check_mark">
-                    <FontAwesomeIcon icon={faCheck} />
-                    <p>24/7 SECURITY</p>
-                  </div>
-                  <div className="check_mark">
-                    <FontAwesomeIcon icon={faCheck} />
-                    <p>GREAT HOUSEKEEPING</p>
-                  </div>
-                  <div className="check_mark">
-                    <FontAwesomeIcon icon={faCheck} />
-                    <p>STANDBY GENERATOR</p>
-                  </div>
-                </div>
-                <div style={{ flex: "0.5" }}>
-                  <div className="check_mark">
-                    <FontAwesomeIcon icon={faCheck} />
-                    <p>FIRE SAFETY</p>
-                  </div>
-                  <div className="check_mark">
-                    <FontAwesomeIcon icon={faCheck} />
-                    <p>STANDBY GENERATOR</p>
-                  </div>
-                  <div className="check_mark">
-                    <FontAwesomeIcon icon={faCheck} />
-                    <p>EASY AND CONTROLLED ACCESSIBILITY TO ALL FLOOR</p>
-                  </div>
-                </div>
-              </div>
             </div>
           </div>
         </div>
       </section>
       {/* ************** About us end ************** */}
+      {/* ************** Mandatory services ************** */}
+      <section>
+        <div className="container mandatory">
+          <h1>Mandatory Services</h1>
+          <div className="mandatory_lists">
+            <ul className="col-sm-6">
+              <li style={{ textTransform: "capitalize" }}>
+                <h4 style={{ fontWeight: "bold" }}>24/7 SECURITY</h4>
+                <p style={{ width: 500, fontSize: 14 }}>
+                  We provide 24 hours round clock secure environment to our
+                  clients. Remember, your safety is our topmost priority.
+                </p>
+              </li>
+              <li style={{ textTransform: "capitalize" }}>
+                <h4 style={{ fontWeight: "bold" }}>GREAT HOUSEKEEPING</h4>
+                <p style={{ width: 500, fontSize: 14 }}>
+                  We offer a professional and skilled staff and workforce that
+                  will not only ensure your safety, but also assure your
+                  prosperity.
+                </p>
+              </li>
+              <li style={{ textTransform: "capitalize" }}>
+                <h4 style={{ fontWeight: "bold" }}>STANDBY GENERATOR</h4>
+                <p style={{ width: 500, fontSize: 14 }}>
+                  A5B&D is also offering the option of a standby generator in
+                  case of emergency blackouts.
+                </p>
+              </li>
+            </ul>
+            <ul className="col-sm-6">
+              <li style={{ textTransform: "capitalize" }}>
+                <h4 style={{ fontWeight: "bold" }}>FIRE SAFETY</h4>
+                <p style={{ width: 500, fontSize: 14 }}>
+                  Being aware of the unpredictable situation and urgency, we are
+                  also equipping the project with fire safety measures and
+                  passages.
+                </p>
+              </li>
+              <li style={{ textTransform: "capitalize" }}>
+                <h4 style={{ fontWeight: "bold" }}>
+                  EASY AND CONTROLLED ACCESSIBILITY TO ALL FLOOR
+                </h4>
+                <p style={{ width: 500, fontSize: 14 }}>
+                  A5B&D is ensuring the installation of fast and full working
+                  heavy-duty lifts to guarantee quick access to all floors.
+                </p>
+              </li>
+              <li style={{ textTransform: "capitalize" }}>
+                <h4 style={{ fontWeight: "bold" }}>RECYCLING PLAN</h4>
+                <p style={{ width: 500, fontSize: 14 }}>
+                  We have made decisive plan in recycling the waste water by
+                  utilizing them for greenery or eco-friendly purposes.
+                </p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      {/* ************** Mandatory services end ************** */}
       {/* ************** Experience ************** */}
       <section>
         <div className="container experience">
-          <h1>Our Expertise</h1>
-          <p>
-            We encourage a culture that is clean and hygienic. Our housekeeping
-            staff is professional and diligent in meeting the requirements of
-            our guests and residents at any time.
-          </p>
+          <h1>Additional Conveniences</h1>
           <div className="experience_lists">
             <ul>
               <li style={{ textTransform: "capitalize" }}>
@@ -147,21 +216,21 @@ function Home() {
                   icon={faDotCircle}
                   style={{ color: "#40515e", margin: "0 10px" }}
                 />
-                Theme park facing
+                Theme Park Facing
               </li>
               <li style={{ textTransform: "capitalize" }}>
                 <FontAwesomeIcon
                   icon={faDotCircle}
                   style={{ color: "#40515e", margin: "0 10px" }}
                 />
-                Commercial showrooms with benefits
+                Commercial Showrooms With Benefits
               </li>
               <li style={{ textTransform: "capitalize" }}>
                 <FontAwesomeIcon
                   icon={faDotCircle}
                   style={{ color: "#40515e", margin: "0 10px" }}
                 />
-                Welcoming reception
+                Welcoming Reception
               </li>
             </ul>
             <ul>
@@ -184,7 +253,7 @@ function Home() {
                   icon={faDotCircle}
                   style={{ color: "#40515e", margin: "0 10px" }}
                 />
-                Modren kitchen
+                Modern style kitchen
               </li>
             </ul>
             <ul>
@@ -200,14 +269,14 @@ function Home() {
                   icon={faDotCircle}
                   style={{ color: "#40515e", margin: "0 10px" }}
                 />
-                Stand by generator
+                Situated on Jinnah Avenue
               </li>
               <li style={{ textTransform: "capitalize" }}>
                 <FontAwesomeIcon
                   icon={faDotCircle}
                   style={{ color: "#40515e", margin: "0 10px" }}
                 />
-                24/7 Security and maintainance
+                Timely maintenance
               </li>
             </ul>
           </div>
@@ -236,12 +305,13 @@ function Home() {
             <div className="col-lg-4 service_col">
               <h3 className="service_heading">Book Your Visit Today!</h3>
               <p className="service_para">
-                Our team of expert and verified resisted agents will be waiting
-                for your arrival. the team will provide you comprehensive
-                details of our project Sky View, while taking you on a exiting
-                journey of Bharia town Karachi and to our site location. You can
-                see the amazing adventure park in front of your project on main
-                jinna avenue, the only residential project of jinna venue
+                Our team of expert and genuine agents will be waiting for your
+                arrival. The team will elaborate you with the comprehensive
+                details of our project Sky View while taking you on an exciting
+                journey to our site location in Bahria Town, Karachi. You will
+                witness the perception of the project which will be constructed
+                in front of the famous adventure theme park on main Jinnah
+                Avenue, Bahria Town.
               </p>
               <a href="#book">
                 <button
@@ -285,32 +355,44 @@ function Home() {
                 padding: "150px 70px",
               }}
             >
-              <h1>Book a visit</h1>
+              <h1>Book a Visit Today</h1>
               <div className="row">
-                <div className="col testimonial_form_col">
+                <div className="col book_form_col">
                   <label htmlFor="testimonial_name">Name</label>
                   <input
                     type="text"
                     placeholder="Your Name"
                     id="testimonial_name"
+                    value={bookVisit.name}
+                    onChange={(e) =>
+                      setBookVisit({ ...bookVisit, name: e.target.value })
+                    }
                   />
                 </div>
-                <div className="col testimonial_form_col">
+                <div className="col book_form_col">
                   <label htmlFor="testimonial_phone">Phone Number</label>
                   <input
                     type="text"
                     id="testimonial_phone"
                     placeholder="Your Phone"
+                    value={bookVisit.number}
+                    onChange={(e) =>
+                      setBookVisit({ ...bookVisit, number: e.target.value })
+                    }
                   />
                 </div>
               </div>
               <div className="row">
-                <div className="col testimonial_form_col">
+                <div className="col book_form_col">
                   <label htmlFor="testimonial_budget">Number of persons</label>
                   <select
                     name
                     id="testimonial_budget"
                     className="testimonial_budget_select"
+                    value={bookVisit.persons}
+                    onChange={(e) =>
+                      setBookVisit({ ...bookVisit, persons: e.target.value })
+                    }
                   >
                     <option value={0}>Select</option>
                     <option value="1">1</option>
@@ -320,47 +402,56 @@ function Home() {
                     <option value="5+">5+</option>
                   </select>
                 </div>
-                <div className="col testimonial_form_col">
+                <div className="col book_form_col">
                   <label htmlFor="testimonial_time">Time</label>
                   <select
                     name
                     id="testimonial_time"
                     className="testimonial_budget_select"
+                    value={bookVisit.time}
+                    onChange={(e) =>
+                      setBookVisit({ ...bookVisit, time: e.target.value })
+                    }
                   >
                     <option value={0}>Select time</option>
-                    <option value="$1000-$3000">10:00</option>
-                    <option value="$1000-$3000">10:30</option>
-                    <option value="$1000-$3000">11:00</option>
-                    <option value="$1000-$3000">11:30</option>
-                    <option value="$1000-$3000">12:00</option>
-                    <option value="$1000-$3000">12:30</option>
-                    <option value="$1000-$3000">1:00</option>
-                    <option value="$1000-$3000">1:30</option>
-                    <option value="$1000-$3000">2:00</option>
-                    <option value="$1000-$3000">2:30</option>
-                    <option value="$1000-$3000">3:00</option>
-                    <option value="$1000-$3000">3:30</option>
-                    <option value="$1000-$3000">4:00</option>
-                    <option value="$1000-$3000">4:30</option>
-                    <option value="$1000-$3000">5:00</option>
-                    <option value="$1000-$3000">5:30</option>
-                    <option value="$1000-$3000">6:00</option>
-                    <option value="$1000-$3000">6:30</option>
-                    <option value="$1000-$3000">7:00</option>
+                    <option value="10:00">10:00</option>
+                    <option value="10:30">10:30</option>
+                    <option value="11:00">11:00</option>
+                    <option value="11:30">11:30</option>
+                    <option value="12:00">12:00</option>
+                    <option value="12:30">12:30</option>
+                    <option value="1:00">1:00</option>
+                    <option value="1:30">1:30</option>
+                    <option value="2:00">2:00</option>
+                    <option value="2:30">2:30</option>
+                    <option value="3:00">3:00</option>
+                    <option value="3:30">3:30</option>
+                    <option value="4:00">4:00</option>
+                    <option value="4:30">4:30</option>
+                    <option value="5:00">5:00</option>
+                    <option value="5:30">5:30</option>
+                    <option value="6:00">6:00</option>
+                    <option value="6:30">6:30</option>
+                    <option value="7:00">7:00</option>
                   </select>
                 </div>
               </div>
               <div className="row">
-                <div className="col testimonial_form_col">
+                <div className="col book_form_col">
                   <label htmlFor="testimonial_date">Date</label>
                   <input
                     type="date"
                     id="testimonial_date"
                     placeholder="Your Phone"
+                    value={bookVisit.date}
+                    onChange={(e) =>
+                      setBookVisit({ ...bookVisit, date: e.target.value })
+                    }
                   />
                   <button
                     type="button"
                     className="btn btn-primary number about_button mt-4"
+                    onClick={bookavisit}
                   >
                     Submit Request
                   </button>
@@ -371,7 +462,9 @@ function Home() {
         </div>
         <div className="contact_background_image">
           <h1>
-            Don’t Hesitate To Contact Us For Better Information And Services
+            For further information,
+            <br />
+            contact us now
           </h1>
         </div>
       </section>
@@ -380,43 +473,12 @@ function Home() {
       <div className="container contact_form">
         <div className="row contact_row">
           <div className="col-lg-6 col-12 contact_col contact_image">
-            <h1>MANAGE YOUR PROPERTY 24/7</h1>
-            <p className="contact_para">
-              Fill in the form and tell us about your project. Our team will
-              contact you promptly to discuss next steps.
+            <h1>Buy your dream project now</h1>
+            <p>
+              Fill in your information and tell us about your idea, our team
+              will contact you promptly. They will be pleased to share further
+              details regarding the project, SkyView.
             </p>
-            <div className="contact_checks">
-              <div className="contact_check_mark">
-                <FontAwesomeIcon
-                  icon={faCheck}
-                  className="contact_check_icon"
-                />
-                <p>
-                  Our entire team is determined to offer you personalized
-                  services
-                </p>
-              </div>
-              <div className="contact_check_mark">
-                <FontAwesomeIcon
-                  icon={faCheck}
-                  className="contact_check_icon"
-                />
-                <p>
-                  Our entire team is determined to offer you personalized
-                  services
-                </p>
-              </div>
-              <div className="contact_check_mark">
-                <FontAwesomeIcon
-                  icon={faCheck}
-                  className="contact_check_icon"
-                />
-                <p>
-                  Our entire team is determined to offer you personalized
-                  services
-                </p>
-              </div>
-            </div>
             <button type="button" className="btn btn-primary contact_button">
               03041115505
             </button>
@@ -428,17 +490,37 @@ function Home() {
             <div className="row">
               <div className="col form_col">
                 <label htmlFor="name">Name</label>
-                <input type="text" placeholder="Your Name" id="name" />
+                <input
+                  type="text"
+                  placeholder="Your Name"
+                  id="name"
+                  value={form.name}
+                  onChange={(e) => setForm({ ...form, name: e.target.value })}
+                />
               </div>
+            </div>
+            <div className="row">
               <div className="col form_col">
                 <label htmlFor="email">Email</label>
-                <input type="text" id="email" placeholder="Your Email" />
+                <input
+                  type="text"
+                  id="email"
+                  placeholder="Your Email"
+                  value={form.email}
+                  onChange={(e) => setForm({ ...form, email: e.target.value })}
+                />
               </div>
             </div>
             <div className="row">
               <div className="col form_col">
                 <label htmlFor="phone">Phone Number</label>
-                <input type="number" id="phone" placeholder="Your Phone" />
+                <input
+                  type="number"
+                  id="phone"
+                  placeholder="Your Phone"
+                  value={form.number}
+                  onChange={(e) => setForm({ ...form, number: e.target.value })}
+                />
               </div>
             </div>
             <div className="row">
@@ -449,15 +531,18 @@ function Home() {
                   rows={7}
                   placeholder="Additional Details"
                   style={{
-                    padding: "15px 20px",
+                    padding: "7px 10px",
                     fontSize: "17px",
                     outline: "none",
                     width: "100%",
                   }}
+                  value={form.detail}
+                  onChange={(e) => setForm({ ...form, detail: e.target.value })}
                 />
                 <button
                   type="button"
                   className="btn btn-primary number about_button mt-5"
+                  onClick={send}
                 >
                   Submit Request
                 </button>

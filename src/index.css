@@ -1,10 +1,10 @@
 @font-face {
-  font-family: "Inter";
-  src: url("font/Inter-Regular.ttf");
+  font-family: "Aileron";
+  src: url("font/Aileron-Regular.otf");
 }
 
 * {
-  font-family: Inter, Sans-serif;
+  font-family: Aileron;
   list-style: none;
 }
 
@@ -78,7 +78,7 @@
 }
 
 .headings h1 {
-  font-size: 65px;
+  font-size: 35px;
   width: 500px;
   font-weight: 600;
 }
@@ -118,6 +118,20 @@ section {
   margin: 70px 0 !important;
 }
 
+.mandatory_lists {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  text-align: left !important;
+  font-size: 17px;
+  margin: 50px 0 !important;
+}
+
+.mandatory_lists p {
+  color: #808080;
+}
+
 .services {
   position: relative;
   z-index: 1;
@@ -152,6 +166,7 @@ section {
   font-size: 15px;
   line-height: 30px;
   color: #808080;
+  vertical-align: middle;
 }
 
 .about_image {
@@ -161,12 +176,10 @@ section {
   vertical-align: middle;
 }
 
-.about_content {
-  vertical-align: middle;
-}
-
 .about_content > p {
-  margin: 40px 0;
+  margin: 20px 0 0 0;
+  text-align: justify;
+  font-size: 14px;
 }
 
 .about_us_heading {
@@ -201,9 +214,11 @@ section {
 }
 
 .service_para {
-  font-size: 16px;
+  font-size: 14px;
   color: #40515e;
-  margin-top: 10px;
+  margin: 25px 0;
+  line-height: 25px;
+  text-align: justify;
 }
 
 .checks {
@@ -224,25 +239,32 @@ section {
 
 .about_testimonial {
   position: relative;
+  overflow: visible !important;
 }
 
 .testimonial {
-  position: absolute !important;
-  right: 0px !important;
-  bottom: -20px !important;
-  padding: 40px !important;
-  background-color: rgba(64, 81, 94, 1) !important;
-  color: #fff !important;
-  width: 50% !important;
+  position: absolute;
+  background-color: #40515e;
+  color: #ffffff;
+  width: 330px;
+  right: -10px;
+  padding: 40px 25px;
+  bottom: -5px;
+  opacity: 0;
+  box-shadow: -5px 0 5px rgb(0 0 0 / 50%);
+}
+
+.visible {
+  animation: wipeUp 1s linear forwards;
 }
 
 .cone {
-  position: absolute !important;
-  width: 100px !important;
-  height: 50px !important;
-  bottom: 0px !important;
-  left: -90px !important;
-  background: linear-gradient(220deg, #40515e 48%, #ffffff00 26%) !important;
+  position: absolute;
+  width: 100px;
+  height: 50px;
+  bottom: 0px;
+  left: -90px;
+  background: linear-gradient(220deg, #40515e 48%, #ffffff00 26%);
 }
 
 .quote_icon {
@@ -259,6 +281,19 @@ section {
   text-align: center;
 }
 
+.mandatory {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.mandatory h1 {
+  font-size: 30px;
+  font-weight: 600;
+  color: #272b36;
+  text-align: center;
+}
+
 .experience h3 {
   text-transform: uppercase;
   color: #40515e;
@@ -267,7 +302,7 @@ section {
 }
 
 .experience h1 {
-  font-size: 38px;
+  font-size: 30px;
   font-weight: 800;
   color: #272b36;
 }
@@ -297,8 +332,8 @@ section {
 .service_heading {
   text-transform: uppercase;
   color: #40515e;
-  font-weight: 800;
-  font-size: 15px;
+  font-weight: 900 !important;
+  font-size: 20px;
 }
 
 .service_slogan {
@@ -345,6 +380,7 @@ section {
   font-size: larger;
   font-weight: 700;
   line-height: 25px;
+  text-align: justify;
 }
 
 .testimonial_image {
@@ -428,6 +464,7 @@ section {
   position: relative !important;
   bottom: 170px !important;
   z-index: 999 !important;
+  opacity: 0;
 }
 
 .contact_background_image {
@@ -463,8 +500,7 @@ section {
 }
 
 .about_col {
-  width: 47%;
-  overflow: hidden;
+  flex: 0.48 0 0 !important;
 }
 
 .contact_background_image h1 {
@@ -552,34 +588,50 @@ section {
 
 .testimonial_form_col label {
   font-size: 16px;
-}
-
-.testimonial_form_col input,
-.testimonial_budget_select {
-  padding: 6px;
-  font-size: 15px;
-  width: 100%;
-  outline: none;
-  border-radius: 3px;
+  color: #808080;
 }
 
 .form_col label {
   font-size: 17px;
+  /* font-weight: 600; */
+  color: #808080;
 }
 
 .form_col input,
 .budget_select {
-  padding: 15px 20px !important;
-  font-size: 17px;
+  padding: 7px 10px;
+  font-size: 15px;
   width: 100%;
   outline: none;
+  border-radius: 4px;
+  border: 1px solid #808080;
+}
+
+.book_form_col {
+  display: flex;
+  flex-direction: column;
+}
+
+.book_form_col label {
+  font-size: 17px;
+  font-weight: 600;
+}
+
+.book_form_col input,
+.book_form_col select {
+  padding: 7px 10px;
+  font-size: 14px;
+  width: 100%;
+  outline: none;
+  border: 1px solid #808080;
+  border-radius: 4px;
 }
 
 .conatct_form_col {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  padding: 100px 40px 0 40px !important;
+  padding: 0 20px !important;
 }
 
 .companies {
@@ -871,7 +923,7 @@ section {
 @keyframes wipeUp {
   from {
     opacity: 0;
-    transform: translateY(100px);
+    transform: translateY(150px);
   }
   to {
     opacity: 1;

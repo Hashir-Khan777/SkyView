@@ -132,13 +132,18 @@ function Footer() {
                 Get the latest news &amp; updates
               </p>
               <div className="container">
-                <div className="row newsletter_links justify-content-evenly align-items-start">
-                  <div className="col-lg-2 social_link">
+                <div className="row newsletter_links">
+                  <div
+                    className="col-lg-2 social_link"
+                    style={{ marginRight: 10 }}
+                  >
                     <a
                       href="https://www.facebook.com/SVtower"
                       target="_blank"
                       className="newsletter_circle"
-                      style={{ backgroundColor: "#4b69b1" }}
+                      style={{
+                        backgroundColor: "#4b69b1",
+                      }}
                     >
                       <FontAwesomeIcon
                         icon={faFacebookF}
@@ -165,12 +170,12 @@ function Footer() {
           </div>
         </div>
         <div className="copy_right">
-          <p style={{ color: "#00b53a" }}>
+          <p style={{ color: "#ffffff" }}>
             A project of{" "}
             <a
               href="http://www.a5bd.com"
               target="_blank"
-              style={{ color: "#00b53a", textDecoration: "none" }}
+              style={{ color: "#ffffff", textDecoration: "none" }}
             >
               A5 builders and developers
             </a>

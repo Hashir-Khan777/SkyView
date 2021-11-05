@@ -97,6 +97,7 @@
   font-size: 18px !important;
   text-transform: uppercase !important;
   margin-top: 20px !important;
+  border-radius: 4px !important;
   transition: all 0.3s linear !important;
 }
 
@@ -197,13 +198,13 @@ section {
 }
 
 .about_button {
-  border-radius: 0% !important;
   align-self: flex-start !important;
   text-transform: uppercase !important;
   font-weight: 800 !important;
   font-size: 13px !important;
   padding: 16px 36px !important;
   background-color: #40515e !important;
+  border-radius: 4px !important;
 }
 
 .tvc {
@@ -348,6 +349,8 @@ section {
   width: 32% !important;
   height: 330px;
   margin: 5px !important;
+  overflow: hidden !important;
+  transition: all 0.5s linear;
 }
 
 .service_col:nth-child(1) {
@@ -355,9 +358,39 @@ section {
 }
 
 .service_col img {
-  width: 100%;
+  width: 105%;
   height: 100%;
   object-fit: cover;
+  margin-left: -10px;
+  transition: all 0.5s linear;
+}
+
+.service_image_overlay {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  transition: all 0.5s linear;
+}
+
+.service_image_overlay button {
+  text-transform: uppercase !important;
+  font-weight: 800 !important;
+  font-size: 13px !important;
+  padding: 16px 36px !important;
+  margin: 0 10px !important;
+  background-color: #40515e !important;
+  border-radius: 4px !important;
+}
+
+.service_col:hover .service_image_overlay {
+  top: 0;
+  transition: all 0.5s linear;
 }
 
 .experience_para {
@@ -385,10 +418,24 @@ section {
 
 .testimonial_image {
   position: relative;
-  background-image: url("images/image4.jpeg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+}
+
+.testimonial_image img {
+  position: relative;
+  width: 110%;
+  height: 100%;
+  margin: 0 -10px;
+  object-fit: cover;
+}
+
+.image_overlay {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 110%;
+  height: 100%;
+  opacity: 0.5;
+  background-color: #091e2a;
 }
 
 .testimonial_center {
@@ -570,6 +617,7 @@ section {
   border-radius: 0px !important;
   padding: 18px 32px 18px 32px !important;
   margin-top: 70px !important;
+  border-radius: 4px !important;
 }
 
 .contact_button:hover {
@@ -582,10 +630,6 @@ section {
   margin: 20px 0;
 }
 
-.testimonial_col .row {
-  margin: 10px 0;
-}
-
 .testimonial_form_col label {
   font-size: 16px;
   color: #808080;
@@ -593,7 +637,6 @@ section {
 
 .form_col label {
   font-size: 17px;
-  /* font-weight: 600; */
   color: #808080;
 }
 
@@ -613,7 +656,7 @@ section {
 }
 
 .book_form_col label {
-  font-size: 17px;
+  font-size: 14px;
   font-weight: 600;
 }
 
@@ -625,6 +668,8 @@ section {
   outline: none;
   border: 1px solid #808080;
   border-radius: 4px;
+  opacity: 0.8;
+  margin-top: 15px;
 }
 
 .conatct_form_col {
